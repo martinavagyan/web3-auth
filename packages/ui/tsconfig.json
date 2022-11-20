@@ -1,0 +1,19 @@
+{
+  "include": ["."],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "noEmit": false,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "baseUrl": "./",
+    "rootDir": ".",
+    "outDir": "./dist",
+    "typeRoots": ["node_modules/@types"]
+  }
+}

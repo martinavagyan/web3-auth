@@ -1,0 +1,57 @@
+{
+  "name": "web3-univeral-auth",
+  "version": "0.6.6",
+  "description": "React components for univeral authentication",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/module.js",
+  "author": "martinavagyan <martinavagyan@gmail.com>",
+  "license": "MIT",
+  "source": "src/index.ts",
+  "scripts": {
+    "build": "parcel build",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
+    "prettier:fix": "prettier -w .",
+    "prettier": "prettier -c ."
+  },
+  "dependencies": {
+    "@root/web3-auth-common": "0.6.3",
+    "@solana/wallet-adapter-react": "^0.15.4",
+    "bs58": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "parcel": "^2.5.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.2",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "typescript": "^4.5.4"
+  },
+  "eslintConfig": {
+    "plugins": [
+      "prettier",
+      "jest"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "extends": [
+      "prettier"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "ignorePatterns": [
+      "**/dist"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}

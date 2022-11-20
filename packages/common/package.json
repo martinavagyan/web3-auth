@@ -1,0 +1,76 @@
+{
+  "name": "@root/web3-auth-common",
+  "version": "0.6.5",
+  "description": "Common functionality for web3 authentication",
+  "main": "dist/index.js",
+  "types": "./dist/index.d.ts",
+  "author": "martinavagyan <martinavagyan@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit --incremental false",
+    "lint": "eslint .",
+    "lint:fix": "yarn lint --fix",
+    "watch": "yarn build --watch",
+    "test": "jest",
+    "prettier:fix": "prettier -w .",
+    "prettier": "prettier -c ."
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.50.1",
+    "bs58": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
+    "tweetnacl": "^1.0.3"
+  },
+  "devDependencies": {
+    "@parcel/packager-ts": "2.5.0",
+    "@parcel/transformer-typescript-types": "2.5.0",
+    "@types/jest": "^27.4.1",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@typescript-eslint/eslint-plugin": "^5.19.0",
+    "@typescript-eslint/parser": "^5.19.0",
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^26.1.4",
+    "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^27.5.1",
+    "prettier": "^2.6.2",
+    "ts-jest": "^27.1.4",
+    "typescript": "^4.5.5"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "testPathIgnorePatterns": [
+      "./dist"
+    ],
+    "testTimeout": 30000
+  },
+  "eslintConfig": {
+    "plugins": [
+      "prettier",
+      "jest"
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "extends": [
+      "prettier"
+    ],
+    "parserOptions": {
+      "project": "./tsconfig.json"
+    },
+    "ignorePatterns": [
+      "**/dist"
+    ]
+  },
+  "prettier": {
+    "singleQuote": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@root/web3-auth",
+  "description": "Authentication library for web3 dapps",
+  "author": "martinavagyan <martinavagyan@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "yarn build:common && yarn build:ui",
+    "publish:all": "yarn publish:common && yarn publish:ui",
+    "publish:common": "yarn workspace @root/web3-auth-common publish --access restricted",
+    "publish:ui": "yarn workspace @root/web3-auth-ui publish --access restricted",
+    "build:common": "yarn workspace @root/web3-auth-common build",
+    "build:ui": "yarn workspace @root/web3-auth-ui build",
+    "lint": "yarn workspace @root/web3-auth-ui lint && yarn workspace @root/web3-auth-common lint",
+    "prettier": "yarn workspace @root/web3-auth-ui prettier && yarn workspace @root/web3-auth-common prettier",
+    "test": "yarn workspace @root/web3-auth-common test"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  }
+}
